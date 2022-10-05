@@ -1,0 +1,43 @@
+@mixin mq($width: "tablet") {
+  @if ($width == "xlarge") {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  } @else if ($width == "min-xlarge") {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else if ($width == "large") {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if ($width == "min-large") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($width == "desktop") {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if ($width == "min-desktop") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($width == "tablet") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if ($width == "min-tablet") {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($width == "small") {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if ($width == "min-small") {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+}
