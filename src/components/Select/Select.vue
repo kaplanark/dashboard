@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
+import Icon from '@icons/Icon.vue';
+
 const props = defineProps(['placeholder', 'options', 'value', 'classes']);
 const emit = defineEmits(['update:value']);
 
@@ -21,9 +23,7 @@ const toggleHandler = () => {
     <div class="select">
         <div class="select__header" @click="toggleHandler" :class="toggle ? 'active':''">
             {{select}}
-            <span class="material-symbols-outlined">
-                expand_more
-            </span>
+            <icon name="down" size="16" />
         </div>
         <div class="select__content" v-show="toggle">
             <div class="select__option" v-for="option in props.options" @click="selectHandler(option)">
@@ -49,13 +49,13 @@ const toggleHandler = () => {
         color: var(--color-text);
         transition: border 0.3s ease;
         cursor: pointer;
-        
+
         &.active {
             border-color: var(--color-primary);
             border-radius: 8px 8px 0 0;
             border-bottom: 1px dashed var(--color-primary);
 
-            span {
+            svg {
                 transform: rotate(180deg);
             }
         }

@@ -6,7 +6,7 @@ import Button from '@components/Button/Button.vue';
 
 const emit = defineEmits(['activeLink', 'toggleAside']);
 
-const toggleIcon = ref('format_indent_decrease');
+const toggleIcon = ref('left');
 
 const activePage = (name) => {
     emit('activeLink', name)
@@ -14,7 +14,7 @@ const activePage = (name) => {
 
 const toggleHandler = () => {
     emit('toggleAside');
-    toggleIcon.value = toggleIcon.value == 'format_indent_decrease' ? 'format_indent_increase' : 'format_indent_decrease';
+    toggleIcon.value = toggleIcon.value == 'left' ? 'right' : 'left';
 };
 
 </script>

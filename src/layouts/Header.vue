@@ -41,7 +41,7 @@ const clickHandler = () => {
         </div>
         <div class="header__actions">
             <div class="btn-group">
-                <Button icon="chat" variant="icon" classes="text-strong" />
+                <Button icon="message" variant="icon" classes="text-strong" />
                 <Badge icon="notifications" active @click="toggleHandler" />
                 <Button icon="settings" variant="icon" classes="text-strong" />
             </div>

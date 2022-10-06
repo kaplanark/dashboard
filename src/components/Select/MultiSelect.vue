@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+import Icon from '@icons/Icon.vue';
+
 const props = defineProps(['placeholder', 'options', 'value']);
 const emit = defineEmits(['update:value']);
 
@@ -27,8 +29,8 @@ const optionFilter = computed(() => {
             <ul class="tag-list">
                 <li class="tag-list__item" v-for="select in selects">
                     {{ select }}
-                    <button type="button" @click="selectHandler(select)" class="material-symbols-outlined">
-                        cancel
+                    <button type="button" @click="selectHandler(select)">
+                        <icon name="close" size="20" />
                     </button>
                 </li>
             </ul>
@@ -135,6 +137,7 @@ const optionFilter = computed(() => {
 
         button {
             background-color: transparent;
+            padding: 2px;
             border: 0;
             cursor: pointer;
             display: flex;

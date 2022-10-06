@@ -1,16 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+
+import Icon from '@icons/Icon.vue';
 
 const emit = defineEmits(['activeLink']);
 
 const links = ref([
     { icon: "home", name: "Dashboard" },
-    { icon: "grid_view", name: "Projects" },
-    { icon: "account_tree", name: "Modules" },
+    { icon: "view", name: "Projects" },
+    { icon: "tree", name: "Modules" },
     { icon: "send", name: "Sprint" },
     { icon: "group", name: "Members" },
-    { icon: "show_chart", name: "Reports" }
-])
+    { icon: "chart", name: "Reports" }
+]);
 
 const clickHandler = (name) => {
     emit('activeLink', name)
@@ -21,9 +23,7 @@ const clickHandler = (name) => {
     <ul class="nav-list">
         <li class="nav-list__item" v-for="(link, index) in links" :key="link.name">
             <a href="#" class="nav-list__link" :class="index == 1 ? 'active' : ''" @click="clickHandler(link.name)">
-                <span class="material-symbols-outlined">
-                    {{ link.icon }}
-                </span>
+                <span><icon :name="link.icon" size="22" /></span>
                 <p>{{ link.name }}</p>
             </a>
         </li>

@@ -12,13 +12,13 @@ import Tag from '@components/Tag/Tag.vue';
             <p>Prorect Title goes here</p>
             <div class="btn-group btn-group--sm">
                 <Button icon="edit" variant="icon" classes="card__header__button" />
-                <Button icon="more_vert" variant="icon" classes="card__header__button" />
+                <Button icon="more" variant="icon" classes="card__header__button" />
             </div>
         </div>
         <div class="card__content">
             <div class="gird">
                 <div class="grid__col">
-                    <Tag name="Active" variant="success" icon="fiber_manual_record" />
+                    <Tag name="Active" variant="success" icon="dot" />
                 </div>
                 <div class="grid__col">
                     b

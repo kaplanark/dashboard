@@ -1,13 +1,30 @@
 <script setup>
-const props = defineProps(['name', 'icon', 'variant', 'classes'])
+import Icon from '@icons/Icon.vue';
+
+const props = defineProps({
+    name: {
+        type: String,
+    },
+    variant: {
+        type: String,
+        default: 'primary',
+    },
+    icon: {
+        type: String,
+    },
+    classes: {
+        type: String,
+        default: '',
+    }
+});
 </script>
 
 <template>
     <button :class="['btn btn--' + props.variant, props.classes]">
-        <span class="material-symbols-outlined" v-if="props.icon != undefined">
-            {{ props.icon }}
-        </span>
-        <p v-if="props.name != undefined">{{ props.name }}</p>
+        <template v-if="props.icon">
+            <icon :name="props.icon" size="20" />
+        </template>
+        <p v-if="props.name">{{ props.name }}</p>
     </button>
 </template>
 
@@ -18,6 +35,7 @@ const props = defineProps(['name', 'icon', 'variant', 'classes'])
     align-items: center;
     justify-content: center;
     gap: 14px;
+
     &--primary {
         background-color: var(--color-primary);
         color: #fff;
@@ -27,6 +45,7 @@ const props = defineProps(['name', 'icon', 'variant', 'classes'])
         line-height: 21px;
         border: none;
         transition: all 0.3s ease-in-out;
+
         &:hover {
             background-color: #e84a4a;
         }
@@ -39,14 +58,14 @@ const props = defineProps(['name', 'icon', 'variant', 'classes'])
         padding: 4px;
         border-radius: 50%;
         font-size: 14px;
-        span {
-            font-size: 24px;
+
+        svg {
             transition: all 0.3s ease-in-out;
         }
 
         &:hover {
-            span {
-                color: var(--color-primary);
+            svg {
+                fill: var(--color-primary);
             }
         }
     }
@@ -61,13 +80,15 @@ const props = defineProps(['name', 'icon', 'variant', 'classes'])
             font-size: 24px;
         }
     }
-    &--circle{
+
+    &--circle {
         height: 32px;
         width: 32px;
         border-radius: 50%;
         border: 1px solid var(--color-text);
         background-color: #fff;
-        span{
+
+        span {
             color: var(--color-text);
         }
     }

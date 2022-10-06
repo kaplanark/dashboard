@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+import Icon from '@icons/Icon.vue';
+
 const props = defineProps(['placeholder']);
 
 const searchText = ref('');
@@ -13,7 +15,7 @@ const show = computed(() => {
 <template>
     <div class="search">
         <div class="search__icon">
-            <span class="material-symbols-outlined">search</span>
+            <icon name="search" size="18"/>
         </div>
         <input type="text" class="search__input" :class="show ? 'active' : ''" :placeholder="props.placeholder"
             v-model="searchText">

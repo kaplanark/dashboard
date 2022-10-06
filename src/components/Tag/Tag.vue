@@ -1,12 +1,12 @@
 <script setup>
+import Icon from '@icons/Icon.vue';
+
 const props = defineProps(['name', 'icon', 'variant', 'classes'])
 </script>
 
 <template>
     <div class="tag" :class="['tag--' + props.variant, props.classes]">
-        <span class="material-symbols-outlined">
-            {{ props.icon }}
-        </span>
+        <icon :name="props.icon" size="22" />
         <p class="tag__name">
             {{ props.name }}
         </p>

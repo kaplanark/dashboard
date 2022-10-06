@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+
+import Icon from '@icons/Icon.vue';
 
 const props = defineProps(['value', 'icon', 'items']);
 const emit = defineEmits(['update:value']);
@@ -21,9 +23,7 @@ const selectHandler = (item) => {
     <div class="dropdown">
         <div class="dropdown__header" @click.stop="toggleHandler">
             <p>{{ select }}</p>
-            <span class="material-symbols-outlined">
-                {{ props.icon }}
-            </span>
+            <icon name="filter" size="24" />
         </div>
         <ul class="dropdown__content" v-show="toggle">
             <li v-for="item in props.items" :key="item" @click="selectHandler(item)">{{ item }}</li>
@@ -47,7 +47,7 @@ const selectHandler = (item) => {
         color: #A0A3BD;
         font-size: 14px;
 
-        span {
+        svg {
             color: var(--color-secondary);
         }
     }

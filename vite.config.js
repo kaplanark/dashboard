@@ -13,6 +13,7 @@ export default defineConfig({
       '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
       '@images': fileURLToPath(new URL('./src/assets/images', import.meta.url)),
       '@scss': fileURLToPath(new URL('./src/assets/scss', import.meta.url)),
+      '@icons': fileURLToPath(new URL('./src/assets/icons', import.meta.url)),
     }
   }
 })

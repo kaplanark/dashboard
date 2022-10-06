@@ -1,12 +1,12 @@
 <script setup>
+import Icon from '@icons/Icon.vue';
+
 const props = defineProps(['icon', 'classes', 'active'])
 </script>
     
 <template>
     <button class="btn btn--badge" :class="props.classes">
-        <span class="material-symbols-outlined">
-            {{ props.icon }}
-        </span>
+        <icon :name="props.icon" size="20" />
         <span class="dot" v-if="props.active != undefined"></span>
     </button>
 </template>
@@ -20,14 +20,13 @@ const props = defineProps(['icon', 'classes', 'active'])
         padding: 4px;
         border-radius: 50%;
         position: relative;
-        span {
-            font-size: 24px;
+        svg {
             transition: all 0.3s ease-in-out;
         }
 
         &:hover {
-            span {
-                color: var(--color-primary);
+            svg {
+                fill: var(--color-primary);
             }
         }
         .dot{
