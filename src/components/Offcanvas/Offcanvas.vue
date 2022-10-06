@@ -11,7 +11,8 @@ const props = defineProps({
 		default: false
 	},
 	bordered: {
-		type: String
+		type: Boolean,
+		default: false
 	}
 });
 const emit = defineEmits(['update:show']);
@@ -28,8 +29,7 @@ const toggleHandler = () => {
 
 <template>
 	<Transition name="fade" mode="out-in">
-		<div class="offcanvas"
-			:class="['offcanvas--' + props.size, props.bordered != undefined ? 'offcanvas--bordered' : '']"
+		<div class="offcanvas" :class="['offcanvas--' + props.size, props.bordered ? 'offcanvas--bordered' : '']"
 			v-show="props.show">
 			<div class="offcanvas__mask" @click="toggleHandler"></div>
 			<Transition name="slide" mode="out-in">

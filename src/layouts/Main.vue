@@ -11,12 +11,20 @@ import Tag from '@components/Tag/Tag.vue';
 	<div class="main">
 		<div class="container">
 			<div class="main__wrapper">
-				<Card v-for="(project, index) in 9" :key="index" bordered>
+				<Card v-for="(project, index) in 9" :key="index">
 					<template #header>
 						<p>Prorect Title goes here</p>
 						<div class="btn-group btn-group--sm">
-							<Button icon="edit" variant="icon" classes="card__header__button" />
-							<Button icon="more" variant="icon" classes="card__header__button" />
+							<Button variant="icon">
+								<template #icon>
+									<icon name="edit" size="20" />
+								</template>
+							</Button>
+							<Button variant="icon">
+								<template #icon>
+									<icon name="more" size="20" />
+								</template>
+							</Button>
 						</div>
 					</template>
 					<template #content>
@@ -38,7 +46,11 @@ import Tag from '@components/Tag/Tag.vue';
 									<Avatar image="https://avatars.githubusercontent.com/u/25702910" size="32" />
 									<Avatar image="https://avatars.githubusercontent.com/u/81494873" size="32" />
 									<Avatar image="https://avatars.githubusercontent.com/u/112624968" size="32" />
-									<Button icon="add" variant="circle" />
+									<Button icon="add" variant="circle">
+										<template #icon>
+											<icon name="add" size="20" />
+										</template>
+									</Button>
 								</div>
 							</div>
 						</div>

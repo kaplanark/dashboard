@@ -1,102 +1,119 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps(['type', 'message', 'closeable']);
+const props = defineProps({
+	type: {
+		type: String,
+		default: 'default'
+	},
+	message: {
+		type: String,
+		default: ''
+	},
+	closeable: {
+		type: Boolean,
+		default: false
+	},
+});
 
 const show = ref(true);
 
 const closeHandler = () => {
-    show.value = false;
+	show.value = false;
 };
 </script>
 
 <template>
-    <div class="alert" :class="'alert--' + props.type" v-if="show">
-        <div class="alert__icon">
-            <icon :name="props.type" size="22" />
-        </div>
-        <div class="alert__content">
-            <p class="alert__text">{{ props.message }}</p>
-        </div>
-        <button v-if="props.closeable != undefined" class="alert__close" @click="closeHandler">
-            <icon name="close" size="20" />
-        </button>
-    </div>
+	<div class="alert" :class="'alert--' + props.type" v-if="show">
+		<div class="alert__icon">
+			<icon :name="props.type" size="22" />
+		</div>
+		<div class="alert__content">
+			<p class="alert__text">{{ props.message }}</p>
+		</div>
+		<button v-if="props.closeable" class="alert__close" @click="closeHandler">
+			<icon name="close" size="20" />
+		</button>
+	</div>
 </template>
 
 <style lang="scss">
 .alert {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    display: flex;
-    border-radius: 6px;
-    gap: 8px;
-    background-color: var(--color-tertiary);
-    color: var(--color-white);
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	display: flex;
+	border-radius: 6px;
+	gap: 8px;
+	background-color: var(--color-tertiary);
+	color: var(--color-white);
 
-    &-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
+	&-group {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
 
-    &__icon {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	&__icon {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    &__content {
-        flex: 1;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
+	&__content {
+		flex: 1;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
 
-    &__title {
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 500;
-    }
+	&__title {
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 500;
+	}
 
-    &__text {
-        margin: 0;
-        font-size: 1rem;
-    }
+	&__text {
+		margin: 0;
+		font-size: 1rem;
+	}
 
-    &__close {
-        background-color: transparent;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        font-size: 1.5rem;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	&__close {
+		background-color: transparent;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-size: 1.5rem;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    &--success {
-        background-color: var(--color-success);
-    }
+	&--default {
+		background-color: var(--color-quinary);
+	}
 
-    &--warning {
-        background-color: var(--color-warning);
-    }
+	&--success {
+		background-color: var(--color-success);
+	}
 
-    &--error {
-        background-color: var(--color-danger);
-    }
+	&--warning {
+		background-color: var(--color-warning);
+	}
 
-    &--info {
-        background-color: var(--color-info);
-    }
+	&--error {
+		background-color: var(--color-danger);
+	}
 
-    &--message {
-        background-color: var(--color-message);
-    }
+	&--info {
+		background-color: var(--color-info);
+	}
+
+	&--message {
+		background-color: var(--color-message);
+	}
 }
 </style>

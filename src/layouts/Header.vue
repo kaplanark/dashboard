@@ -41,19 +41,32 @@ const clickHandler = () => {
 		</div>
 		<div class="header__actions">
 			<div class="btn-group">
-				<Button icon="message" variant="icon" classes="text-strong" />
+				<Button variant="icon" classes="text-strong">
+					<template #icon>
+						<icon name="message" size="20" />
+					</template>
+				</Button>
 				<Badge icon="notifications" active @click="toggleHandler" />
-				<Button icon="settings" variant="icon" classes="text-strong" />
+				<Button variant="icon" classes="text-strong">
+					<template #icon>
+						<icon name="settings" size="20" />
+					</template>
+				</Button>
 			</div>
 			<UserInfo :data="data" classes="cursor-pointer" @click="clickHandler" />
 		</div>
-		<Offcanvas v-model:show="toggleNotification" bordered>
+		<Offcanvas v-model:show="toggleNotification" bordered="true">
 			<template #header>
 				<h3 class="text-secondary">Notification</h3>
 			</template>
 			<template #body>
 				<div class="alert-group">
-					<Alert type="message" message="There are pending projects" closeable />
+					<Alert type="message" message="There are pending projects" closeable="true" />
+					<Alert type="error" message="There are pending projects" closeable="true" />
+					<Alert type="info" message="There are pending projects" closeable="true" />
+					<Alert type="success" message="There are pending projects" />
+					<Alert type="warning" message="There are pending projects" />
+					<Alert message="There are pending projects" closeable="true" />
 				</div>
 			</template>
 		</Offcanvas>

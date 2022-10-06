@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
-  --color-primary: #ff5555;
-  --color-secondary: #3c557a;
-  --color-tertiary: #f1f2f7;
-  --color-quaternary: #f9f9f9;
+	--color-primary: #ff5555;
+	--color-secondary: #3c557a;
+	--color-tertiary: #f1f2f7;
+	--color-quaternary: #f9f9f9;
+	--color-quinary: #9abed6;
 
-  --color-success: #00db99;
-  --color-warning: #f5ae3d;
-  --color-danger: #ff5a80;
-  --color-info: #80d3f9;
-  --color-message: #6d7c94;
+	--color-success: #00db99;
+	--color-warning: #f5ae3d;
+	--color-danger: #ff5a80;
+	--color-info: #80d3f9;
+	--color-message: #6d7c94;
 
-  --color-text: #717986;
-  --color-text-light: #969696;
+	--color-text: #717986;
+	--color-text-light: #969696;
 
-  --font-primary: "Roboto", sans-serif;
+	--font-primary: "Roboto", sans-serif;
 
-  font-size: 16px;
-  line-height: normal;
-  font-weight: 400;
+	font-size: 16px;
+	line-height: normal;
+	font-weight: 400;
 }
