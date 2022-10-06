@@ -1,8 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-import Icon from '@icons/Icon.vue';
-
 const props = defineProps(['placeholder', 'options', 'value']);
 const emit = defineEmits(['update:value']);
 

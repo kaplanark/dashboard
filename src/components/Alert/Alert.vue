@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-import Icon from '@icons/Icon.vue';
-
 const props = defineProps(['type', 'message', 'closeable']);
 
 const show = ref(true);

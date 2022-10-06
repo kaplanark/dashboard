@@ -1,6 +1,4 @@
 <script setup>
-import Icon from '@icons/Icon.vue';
-
 const props = defineProps(['icon', 'classes', 'active'])
 </script>
     

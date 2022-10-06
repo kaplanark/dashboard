@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 
-import Icon from '@icons/Icon.vue';
-
 const emit = defineEmits(['activeLink']);
 
 const links = ref([
