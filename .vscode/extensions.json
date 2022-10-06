@@ -1,3 +1,13 @@
 {
-  "recommendations": ["Vue.volar"]
+	"recommendations": [
+		"Vue.volar",
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"wayou.vscode-todo-highlight"
+	],
+	"unwantedRecommendations": [
+		"dbaeumer.jshint",
+		"hookyqr.beautify",
+		"octref.vetur"
+	]
 }
