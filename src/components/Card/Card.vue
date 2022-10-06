@@ -2,17 +2,16 @@
 const props = defineProps({
 	bordered: {
 		type: String,
-		default: '',
+		default: ''
 	},
 	classes: {
-		type: String,
-		default: '',
+		type: String
 	}
 });
 </script>
 
 <template>
-	<div class="card" :class="[props.bordered == '' ? 'card--bordered':'']">
+	<div class="card" :class="[props.bordered != undefined ? 'card--bordered':'']">
 		<div class="card__header">
 			<slot name="header" />
 		</div>

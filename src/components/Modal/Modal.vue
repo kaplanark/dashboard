@@ -4,19 +4,18 @@
 const props = defineProps({
 	show: {
 		type: Boolean,
-		default: false,
+		default: false
 	},
 	classes: {
 		type: String,
-		default: '',
+		default: ''
 	},
 	size: {
 		type: String,
-		default: 'md',
+		default: 'md'
 	},
 	bordered: {
-		type: String,
-		default: '',
+		type: String
 	},
 });
 const emit = defineEmits(['update:show']);
@@ -33,7 +32,8 @@ const closeHandler = () => {
 
 <template>
 	<Transition name="fade">
-		<div class="modal" :class="['modal--' + props.size, props.classes, props.bordered == '' ? 'modal--bordered':'']"
+		<div class="modal"
+			:class="['modal--' + props.size, props.classes, props.bordered != undefined ? 'modal--bordered':'']"
 			v-if="props.show">
 			<div class="modal__mask" @click="closeHandler"></div>
 			<Transition name="scale">
