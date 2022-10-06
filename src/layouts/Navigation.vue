@@ -13,63 +13,63 @@ const dropValue = ref('');
 const activeTab = ref('');
 const addModal = ref(false);
 const form = ref({
-    title: '',
-    description: '',
-    message: '',
-    status: [
-        { value: 'inactive', label: 'Inactive' },
-        { value: 'onhold', label: 'On Hold' },
-        { value: 'active', label: 'Active' }
-    ],
-    members: ['Seyit', 'Engin', 'Kaplan','Emircan','Tolga']
+	title: '',
+	description: '',
+	message: '',
+	status: [
+		{ value: 'inactive', label: 'Inactive' },
+		{ value: 'onhold', label: 'On Hold' },
+		{ value: 'active', label: 'Active' }
+	],
+	members: ['Seyit', 'Engin', 'Kaplan', 'Emircan', 'Tolga']
 });
 
 const clikHandler = () => {
-    addModal.value = true
+	addModal.value = true
 };
 const submitHandler = () => {
-    console.log(form.value);
+	console.log(form.value);
 };
 
 </script>
 
 <template>
-    <div class="nav">
-        <Button name="New" icon="add" variant="primary" classes="rounded" @click="clikHandler" />
-        <div class="nav__content">
-            <Tabs :panes="tabPanes" v-model:active="activeTab" />
-            <Dropdown :items="dropİtems" v-model:value="dropValue" icon="filter_list" />
-        </div>
-        <Modal v-model:show="addModal" size="md">
-            <template #header>
-                <h2 class="text-secondary">New project</h2>
-            </template>
-            <template #body>
-                <Form :data="form" />
-            </template>
-            <template #footer>
-                <Button name="Add" variant="primary" classes="rounded" @click="submitHandler" />
-            </template>
-        </Modal>
-    </div>
+	<div class="nav">
+		<Button name="New" icon="add" variant="primary" classes="rounded" @click="clikHandler" />
+		<div class="nav__content">
+			<Tabs :panes="tabPanes" v-model:active="activeTab" />
+			<Dropdown :items="dropİtems" v-model:value="dropValue" icon="filter_list" />
+		</div>
+		<Modal v-model:show="addModal" size="md" bordered>
+			<template #header>
+				<h2 class="text-secondary">New project</h2>
+			</template>
+			<template #body>
+				<Form :data="form" />
+			</template>
+			<template #footer>
+				<Button name="Add" variant="primary" classes="rounded" @click="submitHandler" />
+			</template>
+		</Modal>
+	</div>
 </template>
 
 <style lang="scss">
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 0 30px 30px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 0 30px 30px 30px;
 
-    &__content {
-        flex: 1;
-        border: 1px solid #F1F2F7;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 30px;
-    }
+	&__content {
+		flex: 1;
+		border: 1px solid #F1F2F7;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 30px;
+	}
 }
 </style>
