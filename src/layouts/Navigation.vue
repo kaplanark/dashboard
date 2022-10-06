@@ -35,12 +35,16 @@ const submitHandler = () => {
 
 <template>
 	<div class="nav">
-		<Button name="New" icon="add" variant="primary" classes="rounded" @click="clikHandler" />
+		<Button name="New" variant="primary" classes="rounded" @click="clikHandler">
+			<template #icon>
+				<icon name="add" size="22" />
+			</template>
+		</Button>
 		<div class="nav__content">
 			<Tabs :panes="tabPanes" v-model:active="activeTab" />
 			<Dropdown :items="dropİtems" v-model:value="dropValue" icon="filter_list" />
 		</div>
-		<Modal v-model:show="addModal" size="md" bordered>
+		<Modal v-model:show="addModal" size="md" bordered="true">
 			<template #header>
 				<h2 class="text-secondary">New project</h2>
 			</template>

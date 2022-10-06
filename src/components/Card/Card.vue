@@ -5,13 +5,14 @@ const props = defineProps({
 		default: ''
 	},
 	classes: {
-		type: String
+		type: Boolean,
+		default: false
 	}
 });
 </script>
 
 <template>
-	<div class="card" :class="[props.bordered != undefined ? 'card--bordered':'']">
+	<div class="card" :class="[props.bordered ? 'card--bordered':'']">
 		<div class="card__header">
 			<slot name="header" />
 		</div>
