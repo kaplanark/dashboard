@@ -221,3 +221,18 @@ a {
 		margin-bottom: 32px;
 	}
 }
+
+.mt {
+	&-1 {
+		margin-top: 8px;
+	}
+	&-2 {
+		margin-top: 16px;
+	}
+	&-3 {
+		margin-top: 24px;
+	}
+	&-4 {
+		margin-top: 32px;
+	}
+}
