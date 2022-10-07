@@ -24,8 +24,8 @@ const form = ref({
 	members: ['Seyit', 'Engin', 'Kaplan', 'Emircan', 'Tolga']
 });
 
-const clikHandler = () => {
-	addModal.value = true
+const toggleHandler = () => {
+	addModal.value = !addModal.value;
 };
 const submitHandler = () => {
 	console.log(form.value);
@@ -35,7 +35,7 @@ const submitHandler = () => {
 
 <template>
 	<div class="nav">
-		<Button name="New" variant="primary" classes="rounded" @click="clikHandler">
+		<Button name="New" variant="primary" classes="rounded" @click="toggleHandler">
 			<template #icon>
 				<icon name="add" size="22" />
 			</template>
@@ -46,7 +46,14 @@ const submitHandler = () => {
 		</div>
 		<Modal v-model:show="addModal" size="md" bordered="true">
 			<template #header>
-				<h2 class="text-secondary">New project</h2>
+				<div class="display-flex justify-content-between">
+					<h2 class="text-secondary">New project</h2>
+					<Button variant="icon" @click="toggleHandler">
+						<template #icon>
+							<icon name="close" size="24" />
+						</template>
+					</Button>
+				</div>
 			</template>
 			<template #body>
 				<Form :data="form" />

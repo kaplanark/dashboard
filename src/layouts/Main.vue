@@ -1,19 +1,23 @@
 <script setup>
+import { ref } from 'vue'
 import Card from '@components/Card/Card.vue';
 import Progress from '@components/Progress/Progress.vue';
 import Button from '@components/Button/Button.vue';
 import Windget from '@components/Widget/Windget.vue';
 import Avatar from '@components/Avatar/Avatar.vue';
 import Tag from '@components/Tag/Tag.vue';
+import Pagination from '../components/Pagination/Pagination.vue';
+
+const page = ref(2);
 </script>
 
 <template>
 	<div class="main">
 		<div class="container">
 			<div class="main__wrapper">
-				<Card v-for="(project, index) in 9" :key="index">
+				<Card v-for="(project, index) in 6" :key="index">
 					<template #header>
-						<p>Prorect Title goes here</p>
+						<p>Prorect {{ project }}</p>
 						<div class="btn-group btn-group--sm">
 							<Button variant="icon">
 								<template #icon>
@@ -59,6 +63,9 @@ import Tag from '@components/Tag/Tag.vue';
 						<Progress name="Progress" :value="70" :max="100" />
 					</template>
 				</Card>
+			</div>
+			<div class="main__pagination">
+				<Pagination v-model:page="page" :page-count="6" />
 			</div>
 		</div>
 	</div>
