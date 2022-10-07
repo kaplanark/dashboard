@@ -28,11 +28,11 @@ const toggleHandler = () => {
 </script>
 
 <template>
-	<Transition name="fade" mode="out-in">
+	<transition name="fade" mode="out-in">
 		<div class="offcanvas" :class="['offcanvas--' + props.size, props.bordered ? 'offcanvas--bordered' : '']"
 			v-show="props.show">
 			<div class="offcanvas__mask" @click="toggleHandler"></div>
-			<Transition name="slide" mode="out-in">
+			<transition name="slide" mode="out-in">
 				<div class="offcanvas__content" v-show="props.show">
 					<div class="offcanvas__header">
 						<slot name="header"></slot>
@@ -44,9 +44,9 @@ const toggleHandler = () => {
 						<slot name="footer"></slot>
 					</div>
 				</div>
-			</Transition>
+			</transition>
 		</div>
-	</Transition>
+	</transition>
 </template>
 
 <style lang="scss">
