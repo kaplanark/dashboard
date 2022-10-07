@@ -60,7 +60,7 @@ const page = ref(2);
 						</div>
 					</template>
 					<template #action>
-						<Progress name="Progress" :value="70" :max="100" />
+						<Progress name="Progress" :percentage="72" :max="100" />
 					</template>
 				</Card>
 			</div>

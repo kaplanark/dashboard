@@ -71,7 +71,7 @@ const submitHandler = () => {
 	align-items: center;
 	justify-content: space-between;
 	gap: 30px;
-	padding: 0 30px 30px 30px;
+	padding: 0 0 30px 0;
 
 	&__content {
 		flex: 1;

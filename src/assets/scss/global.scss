@@ -1,231 +1,223 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-primary);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-primary);
 }
 html {
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    border-radius: 5px;
-    margin: 0.2rem 0;
-    background: #fff;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #96a5bb;
-    border-radius: 5px;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #657ea4;
-  }
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 5px;
+		margin: 0.2rem 0;
+		background: #fff;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #96a5bb;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #657ea4;
+	}
 }
 
 ul,
 li {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 .rounded {
-  border-radius: 26px !important;
+	border-radius: 26px !important;
 }
 .rounded-xs {
-  border-radius: 8px;
+	border-radius: 8px;
 }
 .text {
-  &-danger {
-    color: var(--color-danger);
-  }
-  &-success {
-    color: var(--color-success);
-  }
-  &-warning {
-    color: var(--color-warning);
-  }
-  &-primary {
-    color: var(--color-primary);
-  }
-  &-secondary {
-    color: var(--color-secondary);
-  }
-  &-start {
-    text-align: start;
-  }
-  &-center {
-    text-align: center;
-  }
-  &-end {
-    text-align: end;
-  }
-  &-strog {
-    & > * {
-      font-weight: 700 !important;
-    }
-  }
+	&-danger {
+		color: var(--color-danger);
+	}
+	&-success {
+		color: var(--color-success);
+	}
+	&-warning {
+		color: var(--color-warning);
+	}
+	&-primary {
+		color: var(--color-primary);
+	}
+	&-secondary {
+		color: var(--color-secondary);
+	}
+	&-start {
+		text-align: start;
+	}
+	&-center {
+		text-align: center;
+	}
+	&-end {
+		text-align: end;
+	}
+	&-strog {
+		& > * {
+			font-weight: 700 !important;
+		}
+	}
 }
 
 .display {
-  &-flex {
-    display: flex;
-  }
-  &-block {
-    display: block;
-  }
-  &-inline-block {
-    display: inline-block;
-  }
-  &-inline {
-    display: inline;
-  }
-  &-none {
-    display: none;
-  }
+	&-flex {
+		display: flex;
+	}
+	&-block {
+		display: block;
+	}
+	&-inline-block {
+		display: inline-block;
+	}
+	&-inline {
+		display: inline;
+	}
+	&-none {
+		display: none;
+	}
 }
 .align {
-  &-items-center {
-    align-items: center;
-  }
-  &-items-start {
-    align-items: flex-start;
-  }
-  &-items-end {
-    align-items: flex-end;
-  }
-  &-items-stretch {
-    align-items: stretch;
-  }
-  &-items-baseline {
-    align-items: baseline;
-  }
-  &-content-center {
-    align-content: center;
-  }
-  &-content-start {
-    align-content: flex-start;
-  }
-  &-content-end {
-    align-content: flex-end;
-  }
-  &-content-between {
-    align-content: space-between;
-  }
-  &-content-around {
-    align-content: space-around;
-  }
-  &-content-stretch {
-    align-content: stretch;
-  }
-  &-self-center {
-    align-self: center;
-  }
-  &-self-start {
-    align-self: flex-start;
-  }
-  &-self-end {
-    align-self: flex-end;
-  }
-  &-self-stretch {
-    align-self: stretch;
-  }
-  &-self-baseline {
-    align-self: baseline;
-  }
-  &-self-auto {
-    align-self: auto;
-  }
+	&-items-center {
+		align-items: center;
+	}
+	&-items-start {
+		align-items: flex-start;
+	}
+	&-items-end {
+		align-items: flex-end;
+	}
+	&-items-stretch {
+		align-items: stretch;
+	}
+	&-items-baseline {
+		align-items: baseline;
+	}
+	&-content-center {
+		align-content: center;
+	}
+	&-content-start {
+		align-content: flex-start;
+	}
+	&-content-end {
+		align-content: flex-end;
+	}
+	&-content-between {
+		align-content: space-between;
+	}
+	&-content-around {
+		align-content: space-around;
+	}
+	&-content-stretch {
+		align-content: stretch;
+	}
+	&-self-center {
+		align-self: center;
+	}
+	&-self-start {
+		align-self: flex-start;
+	}
+	&-self-end {
+		align-self: flex-end;
+	}
+	&-self-stretch {
+		align-self: stretch;
+	}
+	&-self-baseline {
+		align-self: baseline;
+	}
+	&-self-auto {
+		align-self: auto;
+	}
 }
 
 .justify {
-  &-content-center {
-    justify-content: center;
-  }
-  &-content-start {
-    justify-content: flex-start;
-  }
-  &-content-end {
-    justify-content: flex-end;
-  }
-  &-content-between {
-    justify-content: space-between;
-  }
-  &-content-around {
-    justify-content: space-around;
-  }
+	&-content-center {
+		justify-content: center;
+	}
+	&-content-start {
+		justify-content: flex-start;
+	}
+	&-content-end {
+		justify-content: flex-end;
+	}
+	&-content-between {
+		justify-content: space-between;
+	}
+	&-content-around {
+		justify-content: space-around;
+	}
 }
 .font {
-  &--sm {
-    font-size: 14px !important;
-    line-height: 16px;
-  }
+	&--sm {
+		font-size: 14px !important;
+		line-height: 16px;
+	}
 }
 .w {
-  &-100 {
-    width: 100%;
-  }
-  &-50 {
-    width: 50%;
-  }
-  &-25 {
-    width: 25%;
-  }
+	&-100 {
+		width: 100%;
+	}
+	&-50 {
+		width: 50%;
+	}
+	&-25 {
+		width: 25%;
+	}
 }
 
 .btn-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-  &--sm {
-    gap: 16px;
-  }
-}
-
-.container {
-  width: 100%;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-right: auto;
-  margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 34px;
+	&--sm {
+		gap: 16px;
+	}
 }
 
 .ltr {
-  direction: ltr;
+	direction: ltr;
 }
 .rtl {
-  direction: rtl;
+	direction: rtl;
 }
 
 .mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .cursor {
-  &-pointer {
-    cursor: pointer;
-  }
+	&-pointer {
+		cursor: pointer;
+	}
 }
 
 .flex {
-  &-column {
-    flex-direction: column;
-  }
+	&-column {
+		flex-direction: column;
+	}
 }
 .mb {
-  &-1 {
-    margin-bottom: 8px;
-  }
-  &-2 {
-    margin-bottom: 16px;
-  }
-  &-3 {
-    margin-bottom: 24px;
-  }
-  &-4 {
-    margin-bottom: 32px;
-  }
+	&-1 {
+		margin-bottom: 8px;
+	}
+	&-2 {
+		margin-bottom: 16px;
+	}
+	&-3 {
+		margin-bottom: 24px;
+	}
+	&-4 {
+		margin-bottom: 32px;
+	}
 }

@@ -32,11 +32,11 @@ const closeHandler = () => {
 </script>
 
 <template>
-	<Transition name="fade">
+	<transition name="fade">
 		<div class="modal" :class="['modal--' + props.size, props.classes, props.bordered ? 'modal--bordered':'']"
 			v-if="props.show">
 			<div class="modal__mask" @click="closeHandler"></div>
-			<Transition name="scale">
+			<transition name="scale">
 				<div class="modal__content" v-show="props.show">
 					<div class="modal__header">
 						<slot name="header"></slot>
@@ -48,9 +48,9 @@ const closeHandler = () => {
 						<slot name="footer"></slot>
 					</div>
 				</div>
-			</Transition>
+			</transition>
 		</div>
-	</Transition>
+	</transition>
 </template>
 
 <style lang="scss">

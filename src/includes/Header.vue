@@ -10,8 +10,6 @@ import Alert from '@/components/Alert/Alert.vue';
 import Avatar from '../components/Avatar/Avatar.vue';
 import Divider from '../components/Divider/Divider.vue';
 
-const props = defineProps(['title']);
-
 const data = ref({
 	image: 'https://avatars.githubusercontent.com/u/2681643',
 	name: 'Tolga Eğilmezel',
@@ -32,9 +30,9 @@ const clickHandler = () => {
 </script>
 
 <template>
-	<header class="header">
+	<div class="header">
 		<div class="header__title">
-			{{ title }}
+			{{ $route.name }}
 		</div>
 		<div class="header__content">
 			<Search placeholder="Search" @search="searchHandler" />
@@ -82,5 +80,30 @@ const clickHandler = () => {
 			<template #body>
 			</template>
 		</Offcanvas>
-	</header>
+	</div>
 </template>
+
+<style lang="scss">
+.header {
+	padding: 32px 30px 28px 30px;
+	display: grid;
+	grid-template-columns: 1.5fr 1.5fr 2fr;
+
+	&__title {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+		color: var(--color-secondary);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 54px;
+	}
+}
+</style>

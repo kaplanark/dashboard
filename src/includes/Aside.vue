@@ -4,13 +4,9 @@ import { ref } from 'vue'
 import AsideList from '@components/Aside/AsideList.vue';
 import Button from '@components/Button/Button.vue';
 
-const emit = defineEmits(['activeLink', 'toggleAside']);
+const emit = defineEmits(['toggleAside']);
 
 const toggleIcon = ref('left');
-
-const activePage = (name) => {
-	emit('activeLink', name)
-};
 
 const toggleHandler = () => {
 	emit('toggleAside');
@@ -20,7 +16,7 @@ const toggleHandler = () => {
 </script>
 
 <template>
-	<aside class="aside">
+	<div class="aside">
 		<div class="aside__header">
 			<div class="logo">
 				<img class="logo__image" src="@images/apple.svg" />
@@ -33,7 +29,7 @@ const toggleHandler = () => {
 			</Button>
 		</div>
 		<div class="aside__body">
-			<AsideList @activeLink="activePage" />
+			<AsideList />
 		</div>
 		<div class="aside__footer">
 			<Button variant="link" name="Log out" classes="text-danger">
@@ -42,5 +38,55 @@ const toggleHandler = () => {
 				</template>
 			</Button>
 		</div>
-	</aside>
+	</div>
 </template>
+
+<style lang="scss">
+.aside {
+	min-height: 100vh;
+	border-right: 1px solid var(--color-tertiary);
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease-in-out;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 20px 44px 40px;
+	}
+
+	&__body {
+		flex: 1;
+		padding: 20px;
+	}
+
+	&__footer {
+		border-top: 1px solid var(--color-tertiary);
+		padding-top: 22px;
+		padding: 22px 21px 44px 40px;
+		position: sticky;
+		bottom: 0;
+		background-color: #fff;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+
+	&__image {
+		width: 26px;
+		height: 26px;
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		color: #000;
+	}
+}
+</style>

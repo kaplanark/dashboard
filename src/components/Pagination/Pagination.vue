@@ -52,7 +52,7 @@ const isNextDisabled = computed(() => props.page === props.pageCount);
 		border: 1px solid var(--color-tertiary);
 
 		&:disabled {
-			cursor: not-allowed;
+			cursor: default;
 			opacity: 0.5;
 		}
 

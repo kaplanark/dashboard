@@ -1,34 +1,25 @@
 <script setup>
 import { ref } from 'vue';
 
-const emit = defineEmits(['activeLink']);
-
-const active = ref(1);
 const links = ref([
-	{ icon: "home", name: "Dashboard" },
-	{ icon: "view", name: "Projects" },
-	{ icon: "tree", name: "Modules" },
-	{ icon: "send", name: "Sprint" },
-	{ icon: "group", name: "Members" },
-	{ icon: "chart", name: "Reports" }
+	{ icon: "home", name: "Dashboard", to: '/dashboard' },
+	{ icon: "view", name: "Projects", to: '/projects' },
+	{ icon: "tree", name: "Modules", to: '/modules' },
+	{ icon: "send", name: "Sprint", to: '/sprint' },
+	{ icon: "group", name: "Members", to: '/members' },
+	{ icon: "chart", name: "Reports", to: '/reports' }
 ]);
-
-const clickHandler = (name, index) => {
-	emit('activeLink', name);
-	active.value = index;
-}
 </script>
 
 <template>
 	<ul class="nav-list">
-		<li class="nav-list__item" v-for="(link, index) in links" :key="link.name">
-			<a href="#" class="nav-list__link" :class="index == active ? 'active' : ''"
-				@click="clickHandler(link.name,index)">
+		<li class="nav-list__item" v-for="link in links" :key="link.name">
+			<router-link :to="link.to" class="nav-list__link">
 				<span>
 					<icon :name="link.icon" size="22" />
 				</span>
 				<p>{{ link.name }}</p>
-			</a>
+			</router-link>
 		</li>
 	</ul>
 </template>
@@ -63,7 +54,7 @@ const clickHandler = (name, index) => {
 			font-weight: 500;
 		}
 
-		&.active {
+		&.router-link-active {
 			background-color: var(--color-quaternary);
 			font-weight: 500;
 			color: var(--color-primary);
