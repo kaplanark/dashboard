@@ -236,3 +236,30 @@ a {
 		margin-top: 32px;
 	}
 }
+
+.float {
+	&-left {
+		float: left;
+	}
+	&-right {
+		float: right;
+	}
+}
+
+.fs {
+	&-xs {
+		font-size: 12px;
+	}
+	&-sm {
+		font-size: 14px;
+	}
+	&-md {
+		font-size: 16px;
+	}
+	&-lg {
+		font-size: 18px;
+	}
+	&-xl {
+		font-size: 20px;
+	}
+}
