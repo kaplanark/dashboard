@@ -25,13 +25,17 @@ const clikHandler = () => {
 	<div class="forgot">
 		<Card bordered="true">
 			<template #header>
-				<h2 class="text-secondary text-center w-100">Forgot Password</h2>
+				<h2 class="text-secondary text-center w-100">Reset your password</h2>
 			</template>
 			<template #content>
+				<p class="text-secondary mb-2">
+					Enter your user account's verified email address and we will send you a password reset link.
+				</p>
 				<div class="forgot__form">
-					<Input name="email" type="email" v-model:value="email" placeholder="Enter email or username"
+					<Input name="email" type="email" v-model:value="email" placeholder="Enter email address"
 						classes="w-100" />
-					<Button name="Send me mail" variant="primary" classes="w-100 rounded" @click="submitHandler(email)" />
+					<Button name="Send password reset mail" variant="primary" classes="w-100 rounded"
+						@click="submitHandler(email)" />
 				</div>
 			</template>
 			<template #action>
