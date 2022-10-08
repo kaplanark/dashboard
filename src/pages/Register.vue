@@ -1,14 +1,16 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
 
 import Input from '@components/Inputs/Input.vue';
 import Button from '@components/Button/Button.vue';
 import Card from '@components/Card/Card.vue';
 
 const router = useRouter();
+const store = useStore();
 
 const submitHandler = () => {
-	router.push('/');
+	store.commit('setMessage', { show: true, text: 'Account created successfully.', type: 'success' });
 }
 const clikHandler = () => {
 	router.push('/login');
@@ -22,6 +24,10 @@ const clikHandler = () => {
 			</template>
 			<template #content>
 				<div class="register__form mb-2">
+					<div class="input-group">
+						<Input name="name" type="text" placeholder="Enter name" classes="w-100" />
+						<Input name="surname" type="text" placeholder="Enter surname" classes="w-100" />
+					</div>
 					<Input name="username" type="text" placeholder="Enter username" classes="w-100" />
 					<Input name="email" type="email" placeholder="Enter email" classes="w-100" />
 					<Input name="password" type="password" placeholder="Enter password" classes="w-100" />
@@ -37,6 +43,14 @@ const clikHandler = () => {
 </template>
 	
 <style lang="scss">
+.input-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 16px;
+}
+
 .register {
 	display: flex;
 	justify-content: center;
@@ -45,7 +59,7 @@ const clikHandler = () => {
 
 
 	.card {
-		max-width: 500px;
+		max-width: 540px;
 
 		&__action {
 			display: flex;

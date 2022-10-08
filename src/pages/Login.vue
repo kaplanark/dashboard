@@ -8,10 +8,10 @@ import Card from '@components/Card/Card.vue';
 const router = useRouter();
 
 const submitHandler = () => {
-	router.push('/');
+	router.push('/dashboard');
 }
-const clikHandler = () => {
-	router.push('/register');
+const clikHandler = (route) => {
+	router.push(route);
 }
 </script>
 <template>
@@ -29,9 +29,10 @@ const clikHandler = () => {
 			</template>
 			<template #action>
 				<div class="display-flex flex-column align-items-start">
-					<Button name="Forgot password" variant="link" class="forgot-pass-btn mb-1" />
+					<Button name="Forgot password" variant="link" class="forgot-pass-btn mb-1"
+						@click="clikHandler('/forgot-password')" />
 					<Button name="I don't have an account yet" variant="link" class="register-btn text-secondary"
-						@click="clikHandler" />
+						@click="clikHandler('/register')" />
 				</div>
 			</template>
 		</Card>
@@ -47,7 +48,7 @@ const clikHandler = () => {
 
 
 	.card {
-		max-width: 500px;
+		max-width: 540px;
 	}
 
 	&__form {
@@ -61,7 +62,7 @@ const clikHandler = () => {
 .forgot-pass-btn {
 	p {
 		font-size: 14px;
-		color: #ff5555;
+		color: var(--color-danger);
 	}
 }
 </style>
