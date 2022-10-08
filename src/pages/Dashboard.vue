@@ -15,7 +15,7 @@ const toggleHandler = () => {
 		<div class="panel__content">
 			<Header />
 			<main>
-				<router-view />
+				<router-view></router-view>
 			</main>
 		</div>
 	</div>

@@ -4,6 +4,8 @@ import { useRouter } from 'vue-router'
 import Input from '@components/Inputs/Input.vue';
 import Button from '@components/Button/Button.vue';
 import Card from '@components/Card/Card.vue';
+import InputPassword from '../components/Inputs/InputPassword.vue';
+import InputText from '../components/Inputs/InputText.vue';
 
 const router = useRouter();
 
@@ -22,8 +24,8 @@ const clikHandler = (route) => {
 			</template>
 			<template #content>
 				<div class="login__form">
-					<Input name="email" type="email" placeholder="Enter email or username" classes="w-100" />
-					<Input name="password" type="password" placeholder="Enter password" classes="w-100" />
+					<InputText name="login" placeholder="Enter your username"></InputText>
+					<InputPassword name="password" placeholder="Enter password" />
 					<Button name="Login" variant="primary" classes="w-100 rounded" @click="submitHandler" />
 				</div>
 			</template>
@@ -55,7 +57,7 @@ const clikHandler = (route) => {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 16px;
+		gap: 8px;
 	}
 }
 
