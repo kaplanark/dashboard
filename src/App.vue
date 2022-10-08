@@ -13,7 +13,7 @@ const message = computed(() => {
 
 <template>
 	<Message :message="message" />
-	<router-view />
+	<router-view></router-view>
 </template>
 
 <style>

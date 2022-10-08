@@ -5,6 +5,10 @@ import { useStore } from 'vuex';
 import Input from '@components/Inputs/Input.vue';
 import Button from '@components/Button/Button.vue';
 import Card from '@components/Card/Card.vue';
+import InputText from '@components/Inputs/InputText.vue';
+import InputPassword from '@components/Inputs/InputPassword.vue';
+import InputEmail from '@components/Inputs/InputEmail.vue';
+import Divider from '@components/Divider/Divider.vue';
 
 const router = useRouter();
 const store = useStore();
@@ -20,18 +24,20 @@ const clikHandler = () => {
 	<div class="register">
 		<Card>
 			<template #header>
-				<h2 class="text-secondary text-center w-100 mt-2 mb-2">Register</h2>
+				<h2 class="text-secondary text-center w-100">Register</h2>
 			</template>
 			<template #content>
-				<div class="register__form mb-2">
-					<div class="input-group">
-						<Input name="name" type="text" placeholder="Enter name" classes="w-100" />
-						<Input name="surname" type="text" placeholder="Enter surname" classes="w-100" />
+				<div class="register__form">
+					<Divider title="Personal Information" title-placement="left"></Divider>
+					<div class="input-group mb-2">
+						<Input name="name" type="text" placeholder="Enter name"></Input>
+						<Input name="surname" type="text" placeholder="Enter surname"></Input>
 					</div>
-					<Input name="username" type="text" placeholder="Enter username" classes="w-100" />
-					<Input name="email" type="email" placeholder="Enter email" classes="w-100" />
-					<Input name="password" type="password" placeholder="Enter password" classes="w-100" />
-					<Input name="confirmPassword" type="password" placeholder="Confirm password" classes="w-100" />
+					<Divider title="Login Information" title-placement="left"></Divider>
+					<InputText name="username" placeholder="Enter your username"></InputText>
+					<InputEmail name="email" placeholder="Enter your email"></InputEmail>
+					<InputPassword name="password" placeholder="Enter password"></InputPassword>
+					<InputPassword name="confirmPassword" placeholder="Confirm password"></InputPassword>
 				</div>
 			</template>
 			<template #action>
@@ -55,7 +61,7 @@ const clikHandler = () => {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 
 
 	.card {
@@ -73,7 +79,7 @@ const clikHandler = () => {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 16px;
+		gap: 8px;
 	}
 }
 </style>
