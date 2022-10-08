@@ -7,7 +7,7 @@ const props = defineProps({
 		required: true,
 		default: () => ({
 			show: false,
-			message: '',
+			text: '',
 			type: 'message',
 		}),
 	},
@@ -28,7 +28,7 @@ const timed_show = computed(() => {
 				<icon :name="props.message.type" :size="24" />
 			</div>
 			<div class="message__content">
-				{{ props.message.message }}
+				{{ props.message.text }}
 			</div>
 		</div>
 	</transition>
@@ -50,7 +50,6 @@ const timed_show = computed(() => {
 	background-color: #ffffff;
 	border: 1px solid var(--color-primary);
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	min-width: 20%;
 
 	.message__icon {
 		display: flex;

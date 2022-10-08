@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
 	{
-		path: "/", name: "Panel", component: () => import("@pages/Panel.vue"), redirect: 'projects',
+		path: "/", name: "Dashboard", component: () => import("@pages/Dashboard.vue"), redirect: '/login',
 		children: [
 			{
 				path: "dashboard", name: "Dashboard", component: () => import("@views/Dashboard.vue")
@@ -29,6 +29,9 @@ const routes = [
 	},
 	{
 		path: "/register", name: "Register", component: () => import("@pages/Register.vue")
+	},
+	{
+		path: "/forgot-password", name: "ForgotPassword", component: () => import("@pages/ForgotPassword.vue")
 	},
 	{
 		path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("@pages/NotFound.vue")
