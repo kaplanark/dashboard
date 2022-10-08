@@ -6,6 +6,7 @@ import Button from '@components/Button/Button.vue';
 import Card from '@components/Card/Card.vue';
 import InputPassword from '../components/Inputs/InputPassword.vue';
 import InputText from '../components/Inputs/InputText.vue';
+import Divider from '../components/Divider/Divider.vue';
 
 const router = useRouter();
 
@@ -18,22 +19,23 @@ const clikHandler = (route) => {
 </script>
 <template>
 	<div class="login">
-		<Card bordered="true">
+		<Card>
 			<template #header>
-				<h2 class="text-secondary text-center w-100">Login</h2>
+				<h2 class="text-secondary text-center w-100 mt-1 mb-2">Login</h2>
 			</template>
 			<template #content>
 				<div class="login__form">
 					<InputText name="login" placeholder="Enter your username"></InputText>
+					<Button name="Forgot password ?" variant="link" class="forgot-pass-btn"
+						@click="clikHandler('/reset_password')" />
 					<InputPassword name="password" placeholder="Enter password" />
-					<Button name="Login" variant="primary" classes="w-100 rounded" @click="submitHandler" />
+					<Button name="Login" variant="primary" classes="w-100 rounded mt-3" @click="submitHandler" />
 				</div>
 			</template>
 			<template #action>
+				<Divider title="Don't have an account?" title-placement="center"></Divider>
 				<div class="display-flex flex-column align-items-start">
-					<Button name="Forgot password ?" variant="link" class="forgot-pass-btn mb-1"
-						@click="clikHandler('/reset_password')" />
-					<Button name="I don't have an account yet" variant="link" class="register-btn text-secondary"
+					<Button name="Create a new account" variant="link" classes="register-btn text-secondary"
 						@click="clikHandler('/register')" />
 				</div>
 			</template>
@@ -57,11 +59,15 @@ const clikHandler = (route) => {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 8px;
 	}
 }
 
 .forgot-pass-btn {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 8px;
+
 	p {
 		font-size: 14px;
 		color: var(--color-danger);
