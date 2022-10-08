@@ -31,7 +31,7 @@ const routes = [
 		path: "/register", name: "Register", component: () => import("@pages/Register.vue")
 	},
 	{
-		path: "/forgot-password", name: "ForgotPassword", component: () => import("@pages/ForgotPassword.vue")
+		path: "/reset_password", name: "ResetPassword", component: () => import("@pages/ResetPassword.vue")
 	},
 	{
 		path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("@pages/NotFound.vue")

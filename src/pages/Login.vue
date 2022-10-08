@@ -29,8 +29,8 @@ const clikHandler = (route) => {
 			</template>
 			<template #action>
 				<div class="display-flex flex-column align-items-start">
-					<Button name="Forgot password" variant="link" class="forgot-pass-btn mb-1"
-						@click="clikHandler('/forgot-password')" />
+					<Button name="Forgot password ?" variant="link" class="forgot-pass-btn mb-1"
+						@click="clikHandler('/reset_password')" />
 					<Button name="I don't have an account yet" variant="link" class="register-btn text-secondary"
 						@click="clikHandler('/register')" />
 				</div>
