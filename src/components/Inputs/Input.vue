@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['name', 'placeholder', 'value', 'classes']);
+const props = defineProps(['name', 'placeholder', 'value', 'classes', 'disabled']);
 const emit = defineEmits(['update:value']);
 
 const inputHandler = (e) => {
@@ -11,7 +11,7 @@ const inputHandler = (e) => {
 	<div class="input" :class="props.classes">
 		<slot name="label"></slot>
 		<input type="text" :name="props.name" :id="props.name" class="input__input" :placeholder="props.placeholder"
-			:class="props.classes" :value="props.value" @input="inputHandler" />
+			:class="props.classes" :value="props.value" @input="inputHandler" :disabled="props.disabled" />
 	</div>
 </template>
 

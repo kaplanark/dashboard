@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps(['name', 'value', 'validation', 'placeholder']);
+const props = defineProps(['name', 'value', 'validation', 'placeholder', 'disabled']);
 const emit = defineEmits(['update:value', 'update:validation']);
 
 const message = ref('');
@@ -35,7 +35,7 @@ const mouseUpHandler = () => {
 	<div class="input input--validation">
 		<slot name="label"></slot>
 		<input :type="type" :name="props.name" :id="props.name" class="input__input" :placeholder="props.placeholder"
-			@input="inputHandler" @focusout="focusHandler" maxlength="20" minlength="8">
+			@input="inputHandler" @focusout="focusHandler" maxlength="20" minlength="8" :disabled="props.disabled">
 		<span class="input__feedback">{{ message }}</span>
 		<div class="input__eye" @mousedown="mouseDownHandler" @mouseup="mouseUpHandler">
 			<icon :name="visibleIcon" size="22" />

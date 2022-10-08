@@ -26,7 +26,7 @@ const clikHandler = (route) => {
 			<template #content>
 				<div class="login__form">
 					<InputText name="login" placeholder="Enter your username"></InputText>
-					<Button name="Forgot password ?" variant="link" class="forgot-pass-btn"
+					<Button name="Forgot password ?" variant="link" classes="forgot-pass-btn"
 						@click="clikHandler('/reset_password')" />
 					<InputPassword name="password" placeholder="Enter password" />
 					<Button name="Login" variant="primary" classes="w-100 rounded mt-3" @click="submitHandler" />
