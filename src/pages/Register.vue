@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
@@ -37,7 +38,8 @@ const clikHandler = () => {
 					<InputText name="username" placeholder="Enter your username"></InputText>
 					<InputEmail name="email" placeholder="Enter your email"></InputEmail>
 					<InputPassword name="password" placeholder="Enter password"></InputPassword>
-					<InputPassword name="confirmPassword" placeholder="Confirm password"></InputPassword>
+					<InputPassword name="confirmPassword" placeholder="Confirm password" :disabled="true">
+					</InputPassword>
 				</div>
 			</template>
 			<template #action>

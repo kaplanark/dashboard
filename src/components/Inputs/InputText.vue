@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps(['name', 'value', 'validation', 'placeholder']);
+const props = defineProps(['name', 'value', 'validation', 'placeholder', 'disabled']);
 const emit = defineEmits(['update:value', 'update:validation']);
 
 const message = ref('');
@@ -25,7 +25,7 @@ const focusHandler = (e) => {
 	<div class="input input--validation">
 		<slot name="label"></slot>
 		<input type="text" :name="props.name" :id="props.name" class="input__input" :placeholder="props.placeholder"
-			@input="inputHandler" @focusout="focusHandler">
+			@input="inputHandler" @focusout="focusHandler" :disabled="props.disabled">
 		<span class="input__feedback">{{ message }}</span>
 	</div>
 </template>
