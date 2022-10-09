@@ -8,70 +8,70 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 -  [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-### Alert component props
+#### Alert component props
 
 <hr>
 
-|   Name   |  Type   |  Default  |
-| :------: | :-----: | :-------: |
-|   type   | String  | 'default' |
-| message  | String  | undefined |
-| closable | Boolean |   false   |
+|   Name   |   Type    |   Default   |
+| :------: | :-------: | :---------: |
+|   type   | `String`  | _'default'_ |
+| message  | `String`  | _undefined_ |
+| closable | `Boolean` |   _false_   |
 
 ### Avatar component props
 
 <hr>
 
-|  Name   |  Type  |  Default  |
-| :-----: | :----: | :-------: |
-|  image  | String | undefined |
-|  size   | Number |    32     |
-| classes | String | undefined |
+|  Name   |   Type   |   Default   |
+| :-----: | :------: | :---------: |
+|  image  | `String` | _undefined_ |
+|  size   | `Number` |    _32_     |
+| classes | `String` | _undefined_ |
 
 ### Badge component props
 
 <hr>
 
-|  Name   |  Type   |  Default  |
-| :-----: | :-----: | :-------: |
-|  icon   | String  | undefined |
-| active  | Boolean |   false   |
-| classes | String  | undefined |
+|  Name   |   Type    |   Default   |
+| :-----: | :-------: | :---------: |
+|  icon   | `String`  | _undefined_ |
+| active  | `Boolean` |   _false_   |
+| classes | `String`  | _undefined_ |
 
 ### Button component props
 
 <hr>
 
-|  Name   |  Type   |  Default  |
-| :-----: | :-----: | :-------: |
-|  name   | String  | undefined |
-| variant | Boolean | 'primary' |
-| classes | String  | undefined |
+|  Name   |   Type    |   Default   |
+| :-----: | :-------: | :---------: |
+|  name   | `String`  | _undefined_ |
+| variant | `Boolean` | _'primary'_ |
+| classes | `String`  | _undefined_ |
 
 ### Card component props
 
 <hr>
 
-|   Name   |  Type   |  Default  |
-| :------: | :-----: | :-------: |
-| bordered | Boolean |   false   |
-| classes  | String  | undefined |
+|   Name   |   Type    |   Default   |
+| :------: | :-------: | :---------: |
+| bordered | `Boolean` |   _false_   |
+| classes  | `String`  | _undefined_ |
 
 ### Divider component props
 
 <hr>
 
-|      Name       |  Type  |  Default  |
-| :-------------: | :----: | :-------: |
-| title-placement | String | 'center'  |
-|      title      | String | undefined |
+|      Name       |   Type   |   Default   |
+| :-------------: | :------: | :---------: |
+| title-placement | `String` | _'center'_  |
+|      title      | `String` | _undefined_ |
 
 ### Dropdown component props
 
 <hr>
 
-| Name  |  Type  |  Default  |
-| :---: | :----: | :-------: |
-| value | String | undefined |
-| icon  | String | undefined |
-| items | Array  |    []     |
+| Name  |   Type   |   Default   |
+| :---: | :------: | :---------: |
+| value | `String` | _undefined_ |
+| icon  | `String` | _undefined_ |
+| items | `Array`  |    _[]_     |
