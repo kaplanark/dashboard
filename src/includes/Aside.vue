@@ -1,16 +1,23 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 import AsideList from '@components/Aside/AsideList.vue';
 import Button from '@components/Button/Button.vue';
 
 const emit = defineEmits(['toggleAside']);
 
+const router = useRouter();
+
 const toggleIcon = ref('left');
 
 const toggleHandler = () => {
 	emit('toggleAside');
 	toggleIcon.value = toggleIcon.value == 'left' ? 'right' : 'left';
+};
+
+const clickHandler = () => {
+	router.push('/login');
 };
 
 </script>
@@ -32,7 +39,7 @@ const toggleHandler = () => {
 			<AsideList />
 		</div>
 		<div class="aside__footer">
-			<Button variant="link" name="Log out" classes="text-danger">
+			<Button variant="link" name="Log out" classes="text-danger" @click="clickHandler">
 				<template #icon>
 					<icon name="logout" size="20" />
 				</template>

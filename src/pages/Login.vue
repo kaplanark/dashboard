@@ -1,7 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
-import Input from '@components/Inputs/Input.vue';
 import Button from '@components/Button/Button.vue';
 import Card from '@components/Card/Card.vue';
 import InputPassword from '../components/Inputs/InputPassword.vue';
@@ -64,8 +63,8 @@ const clikHandler = (route) => {
 
 .forgot-pass-btn {
 	width: 100%;
-	display: flex;
-	justify-content: flex-end;
+	display: flex !important;
+	justify-content: flex-end !important;
 	margin-bottom: 8px;
 
 	p {

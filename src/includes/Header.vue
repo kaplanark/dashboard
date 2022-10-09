@@ -9,6 +9,7 @@ import Offcanvas from '@components/Offcanvas/Offcanvas.vue';
 import Alert from '@/components/Alert/Alert.vue';
 import Avatar from '../components/Avatar/Avatar.vue';
 import Divider from '../components/Divider/Divider.vue';
+import DynamicTags from '../components/Tag/DynamicTags.vue';
 
 const data = ref({
 	image: 'https://avatars.githubusercontent.com/u/2681643',
