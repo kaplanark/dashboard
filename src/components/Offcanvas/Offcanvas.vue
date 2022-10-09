@@ -73,7 +73,7 @@ const toggleHandler = () => {
 		right: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--color-quaternary);
+		background-color: var(--color-white);
 		overflow-y: auto;
 		padding: 16px;
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
