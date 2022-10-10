@@ -10,54 +10,54 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Alert component props
 
-|   Name   |   Type    |   Default   |
-| :------: | :-------: | :---------: |
-|   type   | `String`  | _'default'_ |
-| message  | `String`  | _undefined_ |
-| closable | `Boolean` |   _false_   |
+|   Name   |   Type    |   Default   |                                                      Description                                                       |
+| :------: | :-------: | :---------: | :--------------------------------------------------------------------------------------------------------------------: |
+|   type   | `String`  | _'default'_ |   <sub style="color: #999">It takes values ​​such as success, _error_, _info_, _danger_, _default_, _message_.</sub>   |
+| message  | `String`  | _undefined_ |              <sub style="color: #999">It takes the message to be displayed in the alert component.</sub>               |
+| closable | `Boolean` |   _false_   | <sub style="color: #999">It takes the value of true or false. If it is true, the alert component will be closed.</sub> |
 
 ## Avatar component props
 
-|  Name   |   Type   |   Default   |
-| :-----: | :------: | :---------: |
-|  image  | `String` | _undefined_ |
-|  size   | `Number` |    _32_     |
-| classes | `String` | _undefined_ |
+|  Name   |   Type   |   Default   |                                           Description                                           |
+| :-----: | :------: | :---------: | :---------------------------------------------------------------------------------------------: |
+|  image  | `String` | _undefined_ | <sub style="color: #999">It takes the image path to be displayed in the avatar component.</sub> |
+|  size   | `Number` |    _32_     |            <sub style="color: #999">It takes the size of the avatar component.</sub>            |
+| classes | `String` | _undefined_ |    <sub style="color: #999">Retrieves the class names to add to the avatar component.</sub>     |
 
 ## Badge component props
 
-|  Name   |   Type    |   Default   |
-| :-----: | :-------: | :---------: |
-|  icon   | `String`  | _undefined_ |
-| active  | `Boolean` |   _false_   |
-| classes | `String`  | _undefined_ |
+|  Name   |   Type    |   Default   |                                                      Description                                                       |
+| :-----: | :-------: | :---------: | :--------------------------------------------------------------------------------------------------------------------: |
+|  icon   | `String`  | _undefined_ |             <sub style="color: #999">It takes the icon name to be displayed in the badge component.</sub>              |
+| active  | `Boolean` |   _false_   | <sub style="color: #999">It takes the value of true or false. If it is true, the badge component will be active.</sub> |
+| classes | `String`  | _undefined_ |                <sub style="color: #999">Retrieves the class names to add to the badge component.</sub>                 |
 
 ## Button component props
 
-|  Name   |   Type    |   Default   |
-| :-----: | :-------: | :---------: |
-|  name   | `String`  | _undefined_ |
-| variant | `Boolean` | _'primary'_ |
-| classes | `String`  | _undefined_ |
+|  Name   |   Type    |   Default   |                                                              Description                                                               |
+| :-----: | :-------: | :---------: | :------------------------------------------------------------------------------------------------------------------------------------: |
+|  name   | `String`  | _undefined_ |                       <sub style="color: #999">It takes the name to be displayed in the button component.</sub>                        |
+| variant | `Boolean` | _'primary'_ | <sub style="color: #999">It takes values ​​such as primary, secondary, success, error, info, danger, warning, light, dark, link.</sub> |
+| classes | `String`  | _undefined_ |                        <sub style="color: #999">Retrieves the class names to add to the button component.</sub>                        |
 
 ## Card component props
 
-|   Name   |   Type    |   Default   |
-| :------: | :-------: | :---------: |
-| bordered | `Boolean` |   _false_   |
-| classes  | `String`  | _undefined_ |
+|   Name   |   Type    |   Default   |                                                       Description                                                       |
+| :------: | :-------: | :---------: | :---------------------------------------------------------------------------------------------------------------------: |
+| bordered | `Boolean` |   _false_   | <sub style="color: #999">It takes the value of true or false. If it is true, the card component will be bordered.</sub> |
+| classes  | `String`  | _undefined_ |                 <sub style="color: #999">Retrieves the class names to add to the card component.</sub>                  |
 
 ## Divider component props
 
-|      Name       |   Type   |   Default   |
-| :-------------: | :------: | :---------: |
-| title-placement | `String` | _'center'_  |
-|      title      | `String` | _undefined_ |
+|      Name       |   Type   |   Default   |                                                                    Description                                                                     |
+| :-------------: | :------: | :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
+| title-placement | `String` | _'center'_  |        <sub style="color: #999">It takes values ​​such as left, right, center. If it is true, the divider component will be bordered.</sub>        |
+|      title      | `String` | _undefined_ | <sub style="color: #999">It takes the title to be displayed in the divider component. If it is true, the divider component will be bordered.</sub> |
 
 ## Dropdown component props
 
-| Name  |   Type   |   Default   |
-| :---: | :------: | :---------: |
-| value | `String` | _undefined_ |
-| icon  | `String` | _undefined_ |
-| items | `Array`  |    _[]_     |
+| Name  |   Type   |   Default   |                                              Description                                              |
+| :---: | :------: | :---------: | :---------------------------------------------------------------------------------------------------: |
+| value | `String` | _undefined_ |     <sub style="color: #999">It takes the value to be displayed in the dropdown component.</sub>      |
+| icon  | `String` | _undefined_ |   <sub style="color: #999">It takes the icon name to be displayed in the dropdown component.</sub>    |
+| items | `Array`  |    _[]_     | <sub style="color: #999">It takes the array of items to be displayed in the dropdown component.</sub> |
