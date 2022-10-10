@@ -1,4 +1,4 @@
-# Vue 3 + Vite
+# Vue 3 Dahboard UI Kit
 
 <a href="https://appleteam.netlify.app/"> LIVE </a>
 
