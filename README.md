@@ -1,77 +1,63 @@
-# Vue 3 + Vite
+# Vue 3 Dahboard UI Kit
 
 <a href="https://appleteam.netlify.app/"> LIVE </a>
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+## Screenshot
 
--  [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+<img src="./screenshot/screenshot.gif" />
 
-### Alert component props
+## Alert component props
 
-<hr>
+|   Name   |   Type    |   Default   |
+| :------: | :-------: | :---------: |
+|   type   | `String`  | _'default'_ |
+| message  | `String`  | _undefined_ |
+| closable | `Boolean` |   _false_   |
 
-|   Name   |  Type   |  Default  |
-| :------: | :-----: | :-------: |
-|   type   | String  | 'default' |
-| message  | String  | undefined |
-| closable | Boolean |   false   |
+## Avatar component props
 
-### Avatar component props
+|  Name   |   Type   |   Default   |
+| :-----: | :------: | :---------: |
+|  image  | `String` | _undefined_ |
+|  size   | `Number` |    _32_     |
+| classes | `String` | _undefined_ |
 
-<hr>
+## Badge component props
 
-|  Name   |  Type  |  Default  |
-| :-----: | :----: | :-------: |
-|  image  | String | undefined |
-|  size   | Number |    32     |
-| classes | String | undefined |
+|  Name   |   Type    |   Default   |
+| :-----: | :-------: | :---------: |
+|  icon   | `String`  | _undefined_ |
+| active  | `Boolean` |   _false_   |
+| classes | `String`  | _undefined_ |
 
-### Badge component props
+## Button component props
 
-<hr>
+|  Name   |   Type    |   Default   |
+| :-----: | :-------: | :---------: |
+|  name   | `String`  | _undefined_ |
+| variant | `Boolean` | _'primary'_ |
+| classes | `String`  | _undefined_ |
 
-|  Name   |  Type   |  Default  |
-| :-----: | :-----: | :-------: |
-|  icon   | String  | undefined |
-| active  | Boolean |   false   |
-| classes | String  | undefined |
+## Card component props
 
-### Button component props
+|   Name   |   Type    |   Default   |
+| :------: | :-------: | :---------: |
+| bordered | `Boolean` |   _false_   |
+| classes  | `String`  | _undefined_ |
 
-<hr>
+## Divider component props
 
-|  Name   |  Type   |  Default  |
-| :-----: | :-----: | :-------: |
-|  name   | String  | undefined |
-| variant | Boolean | 'primary' |
-| classes | String  | undefined |
+|      Name       |   Type   |   Default   |
+| :-------------: | :------: | :---------: |
+| title-placement | `String` | _'center'_  |
+|      title      | `String` | _undefined_ |
 
-### Card component props
+## Dropdown component props
 
-<hr>
-
-|   Name   |  Type   |  Default  |
-| :------: | :-----: | :-------: |
-| bordered | Boolean |   false   |
-| classes  | String  | undefined |
-
-### Divider component props
-
-<hr>
-
-|      Name       |  Type  |  Default  |
-| :-------------: | :----: | :-------: |
-| title-placement | String | 'center'  |
-|      title      | String | undefined |
-
-### Dropdown component props
-
-<hr>
-
-| Name  |  Type  |  Default  |
-| :---: | :----: | :-------: |
-| value | String | undefined |
-| icon  | String | undefined |
-| items | Array  |    []     |
+| Name  |   Type   |   Default   |
+| :---: | :------: | :---------: |
+| value | `String` | _undefined_ |
+| icon  | `String` | _undefined_ |
+| items | `Array`  |    _[]_     |
