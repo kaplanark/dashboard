@@ -14,7 +14,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 |   Name   |   Type    |   Default   |                                                      Description                                                       |
 | :------: | :-------: | :---------: | :--------------------------------------------------------------------------------------------------------------------: |
-|   type   | `String`  | _'default'_ |   <sub style="color: #999">It takes values ​​such as success, _error_, _info_, _danger_, _default_, _message_.</sub>   |
+|   type   | `String`  | _'default'_ |   <sub style="color: #999">It takes values ​​such as _success_, _error_, _info_, _warning_, _default_, _message_.</sub>   |
 | message  | `String`  | _undefined_ |              <sub style="color: #999">It takes the message to be displayed in the alert component.</sub>               |
 | closable | `Boolean` |   _false_   | <sub style="color: #999">It takes the value of true or false. If it is true, the alert component will be closed.</sub> |
 
