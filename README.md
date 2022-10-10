@@ -8,9 +8,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 <img src="./screenshot/screenshot.gif" />
 
-#### Alert component props
-
-<hr>
+## Alert component props
 
 |   Name   |   Type    |   Default   |
 | :------: | :-------: | :---------: |
@@ -18,9 +16,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 | message  | `String`  | _undefined_ |
 | closable | `Boolean` |   _false_   |
 
-### Avatar component props
-
-<hr>
+## Avatar component props
 
 |  Name   |   Type   |   Default   |
 | :-----: | :------: | :---------: |
@@ -28,9 +24,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 |  size   | `Number` |    _32_     |
 | classes | `String` | _undefined_ |
 
-### Badge component props
-
-<hr>
+## Badge component props
 
 |  Name   |   Type    |   Default   |
 | :-----: | :-------: | :---------: |
@@ -38,9 +32,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 | active  | `Boolean` |   _false_   |
 | classes | `String`  | _undefined_ |
 
-### Button component props
-
-<hr>
+## Button component props
 
 |  Name   |   Type    |   Default   |
 | :-----: | :-------: | :---------: |
@@ -48,27 +40,21 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 | variant | `Boolean` | _'primary'_ |
 | classes | `String`  | _undefined_ |
 
-### Card component props
-
-<hr>
+## Card component props
 
 |   Name   |   Type    |   Default   |
 | :------: | :-------: | :---------: |
 | bordered | `Boolean` |   _false_   |
 | classes  | `String`  | _undefined_ |
 
-### Divider component props
-
-<hr>
+## Divider component props
 
 |      Name       |   Type   |   Default   |
 | :-------------: | :------: | :---------: |
 | title-placement | `String` | _'center'_  |
 |      title      | `String` | _undefined_ |
 
-### Dropdown component props
-
-<hr>
+## Dropdown component props
 
 | Name  |   Type   |   Default   |
 | :---: | :------: | :---------: |
