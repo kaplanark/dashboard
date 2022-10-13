@@ -1,4 +1,4 @@
-# Vue 3 Dahboard UI Kit
+# Vue 3 Dashboard UI Kit
 
 It is a Dashborad ui kit project made with Vue.js composition api. It is a free and open source project. You can use it for your personal and commercial projects.
 
