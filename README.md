@@ -69,7 +69,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 Global icon component, src/assest/icons/icons.js file is used. You can add your own icons to this file. You can use the icons in the components by using the name of the icon. For example, you can use the icon named `home` in the components by using the name of the icon.
 `<icon icon="home" size="32" />`
 
-## Icon component props
+## Icon component props .
 
 | Name |   Type   |   Default   |                                         Description                                          |
 | :--: | :------: | :---------: | :------------------------------------------------------------------------------------------: |
