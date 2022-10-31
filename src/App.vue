@@ -1,6 +1,8 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, Teleport } from 'vue'
 import Message from '@components/Message/Message.vue';
+import MessageProvider from '@components/Message/MessageProvider.vue';
+
 import { useStore } from 'vuex'
 
 const store = useStore()
@@ -12,8 +14,12 @@ const message = computed(() => {
 </script>
 
 <template>
-	<Message :message="message" />
 	<router-view></router-view>
+	<Teleport to="body">
+		<MessageProvider>
+			<Message :message="message" />
+		</MessageProvider>
+	</Teleport>
 </template>
 
 <style>
