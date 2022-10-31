@@ -82,7 +82,7 @@ Global icon component, src/assest/icons/icons.js file is used. You can add your 
 
 ### How do I add a new icon?
 
-1. Download the icon svg file from from [bootstrap-icons](https://icons.getbootstrap.com/).
+1. Download the icon svg file from [bootstrap-icons](https://icons.getbootstrap.com/).
 2. Add the icon to the src/assest/icons/icons.js file.
 3. Use the icon in the components by using the name of the icon.
 
