@@ -77,3 +77,13 @@ Global icon component, src/assest/icons/icons.js file is used. You can add your 
 | :--: | :------: | :---------: | :------------------------------------------------------------------------------------------: |
 | icon | `String` | _undefined_ | <sub style="color: #999">It takes the icon name to be displayed in the icon component.</sub> |
 | size | `Number` |    _32_     |           <sub style="color: #999">It takes the size of the icon component.</sub>            |
+
+<blockquote>
+
+### How do I add a new icon?
+
+1. Download the icon svg file from [bootstrap-icons](https://icons.getbootstrap.com/).
+2. Add the icon to the src/assest/icons/icons.js file.
+3. Use the icon in the components by using the name of the icon.
+
+</blockquote>
