@@ -40,7 +40,7 @@ const submitHandler = () => {
 		<div class="nav__content">
 			<Tabs :panes="tabPanes" v-model:active="activeTab" />
 		</div>
-		<Modal v-model:show="addModal" size="md" bordered="true">
+		<Modal v-model:show="addModal" size="md" :bordered="false">
 			<template #header>
 				<div class="display-flex justify-content-between">
 					<h2 class="text-secondary">New Note</h2>
