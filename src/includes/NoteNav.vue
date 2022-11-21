@@ -8,6 +8,8 @@ import Input from '@components/Inputs/Input.vue';
 import Textarea from '@components/Inputs/Textarea.vue';
 import ColorSelect from '@components/Select/ColorSelect.vue';
 import InputImage from '@components/Inputs/InputImage.vue';
+import DynamicTags from '@components/Tag/DynamicTags.vue';
+import Divider from '@components/Divider/Divider.vue';
 
 const tabPanes = ref(['All', 'Pinned', 'Archived', 'Deleted']);
 const activeTab = ref('');
@@ -16,6 +18,7 @@ const form = ref({
 	title: '',
 	note: '',
 	color: '',
+	tags: ['project', 'important'],
 });
 
 const toggleHandler = () => {
@@ -59,6 +62,11 @@ const submitHandler = () => {
 					<div class="form__group">
 						<Textarea name="message" placeholder="Enter note" classes="w-100"/>
 					</div>
+					<Divider title="Note tags" title-placement="left"></Divider>
+					<div class="form__group">
+						<DynamicTags v-model:tags="form.tags" maximum="6"></DynamicTags>
+					</div>
+					<Divider title="Note color" title-placement="left"></Divider>
 					<div class="form__group">
 						<ColorSelect v-model:value="form.color" name="note-color"></ColorSelect>
 					</div>

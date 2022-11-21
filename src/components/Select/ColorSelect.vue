@@ -33,9 +33,8 @@ const selectHandler = (color) => {
 	align-items: center;
 	justify-content: space-between;
 	gap: 10px;
-	padding: 14px 16px;
+	padding: 4px 8px;
 	border-radius: 5px;
-	border: 1px solid var(--color-tertiary);
 
 	&__item {
 		width: 42px;
