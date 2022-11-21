@@ -10,6 +10,7 @@ import ColorSelect from '@components/Select/ColorSelect.vue';
 import InputImage from '@components/Inputs/InputImage.vue';
 import DynamicTags from '@components/Tag/DynamicTags.vue';
 import Divider from '@components/Divider/Divider.vue';
+import Dropdown from '@components/Dropdown/Dropdown.vue';
 
 const tabPanes = ref(['All', 'Pinned', 'Archived', 'Deleted']);
 const activeTab = ref('');
@@ -20,6 +21,8 @@ const form = ref({
 	color: '',
 	tags: ['project', 'important'],
 });
+const dropİtems = ref(['#project', '#important', '#work']);
+const dropValue = ref('');
 
 const toggleHandler = () => {
 	addModal.value = !addModal.value;
@@ -39,6 +42,7 @@ const submitHandler = () => {
 		</Button>
 		<div class="nav__content">
 			<Tabs :panes="tabPanes" v-model:active="activeTab" />
+			<Dropdown :items="dropİtems" v-model:value="dropValue" icon="filter_list" />
 		</div>
 		<Modal v-model:show="addModal" size="md" :bordered="false">
 			<template #header>

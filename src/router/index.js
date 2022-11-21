@@ -23,7 +23,10 @@ const routes = [
 				path: "reports", name: "Reports", component: () => import("@views/Reports.vue")
 			},
 			{
-				path: "sticky-notes", name: "StickyNotes", component: () => import("@views/StickyNotes.vue")
+				path: "notes", name: "Notes", component: () => import("@views/Notes.vue")
+			},
+			{
+				path: "chat", name: "Chat", component: () => import("@views/Chat.vue")
 			}
 		]
 	},
