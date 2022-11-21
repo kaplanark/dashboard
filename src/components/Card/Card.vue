@@ -7,12 +7,17 @@ const props = defineProps({
 	classes: {
 		type: Boolean,
 		default: false
+	},
+	backgroundColor: {
+		type: Boolean,
+		default: false
 	}
 });
 </script>
 
 <template>
-	<div class="card" :class="[props.bordered ? 'card--bordered':'']">
+	<div class="card" :class="[props.bordered ? 'card--bordered':''],props.classes"
+		:style="{'background-color':props.backgroundColor}">
 		<div class="card__header">
 			<slot name="header" />
 		</div>

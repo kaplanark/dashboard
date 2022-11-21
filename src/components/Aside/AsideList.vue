@@ -7,7 +7,8 @@ const links = ref([
 	{ icon: "tree", name: "Modules", to: '/modules' },
 	{ icon: "send", name: "Sprint", to: '/sprint' },
 	{ icon: "group", name: "Members", to: '/members' },
-	{ icon: "chart", name: "Reports", to: '/reports' }
+	{ icon: "chart", name: "Reports", to: '/reports' },
+	{ icon: "sticky", name: "Sticky Notes", to: '/sticky-notes' },
 ]);
 </script>
 

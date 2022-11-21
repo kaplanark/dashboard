@@ -32,17 +32,3 @@ const slectMembers = ref([]);
 		</div>
 	</form>
 </template>
-
-<style lang="scss">
-.form {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-
-	&--extra {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 16px;
-	}
-}
-</style>
