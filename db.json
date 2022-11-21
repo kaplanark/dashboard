@@ -259,30 +259,51 @@
 			"progress": 0
 		}
 	],
-	"pages": [
+	"notes": [
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Dashboard"
+			"id": 1,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		},
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Projects"
+			"id": 2,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		},
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Modules"
+			"id": 3,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		},
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Sprint"
+			"id": 4,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		},
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Members"
+			"id": 5,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		},
 		{
-			"icon": "material-symbols-outlined",
-			"name": "Reports"
+			"id": 6,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
+		},
+		{
+			"id": 7,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
+		},
+		{
+			"id": 8,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
+		},
+		{
+			"id": 9,
+			"title": "Lorem ipsum",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, eget aliquam nisl lorem quis nunc."
 		}
 	]
 }

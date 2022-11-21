@@ -1,0 +1,178 @@
+.triangle-pattern {
+	background: linear-gradient(135deg, #ffffff80 50%, transparent 0),
+		linear-gradient(-135deg, #ffffff80 50%, transparent 0);
+	background-size: 1em 1em;
+	background-color: #ffd1b3;
+}
+
+.line-pattern {
+	background: linear-gradient(
+			0deg,
+			transparent 45%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 55%,
+			transparent 20%,
+			#ffffff 20%,
+			#ffffff 30%,
+			transparent 30%
+		),
+		linear-gradient(
+			90deg,
+			transparent 45%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 55%,
+			transparent 20%,
+			#ffffff 20%,
+			#ffffff 30%,
+			transparent 30%
+		);
+	background-size: 1em 1em;
+	background-color: #fff1b3;
+}
+
+.cross-pattern {
+	background: linear-gradient(
+			45deg,
+			transparent 49%,
+			#ffffff 49% 51%,
+			transparent 51%
+		),
+		linear-gradient(-45deg, transparent 49%, #ffffff 49% 51%, transparent 51%);
+	background-size: 1em 1em;
+	background-color: #dbffb3;
+}
+
+.daimond-pattern {
+	background: linear-gradient(
+			45deg,
+			transparent 14%,
+			#ffffff 15%,
+			#ffffff 20%,
+			transparent 21%,
+			transparent 79%,
+			#ffffff 80%,
+			#ffffff 85%,
+			transparent 86%
+		),
+		linear-gradient(
+			135deg,
+			transparent 14%,
+			#ffffff 15%,
+			#ffffff 20%,
+			transparent 21%,
+			transparent 79%,
+			#ffffff 80%,
+			#ffffff 85%,
+			transparent 86%
+		),
+		radial-gradient(
+			transparent 14%,
+			#ffffff 15%,
+			#ffffff 25%,
+			transparent 26%
+		);
+	background-size: 1em 1em;
+	background-color: #d2f2f9;
+}
+
+.mixed-pattern {
+	background: radial-gradient(
+			circle at top left,
+			transparent 9%,
+			#ffffff 10%,
+			#ffffff 15%,
+			transparent 16%
+		),
+		radial-gradient(
+			circle at bottom left,
+			transparent 9%,
+			#ffffff 10%,
+			#ffffff 15%,
+			transparent 16%
+		),
+		radial-gradient(
+			circle at top right,
+			transparent 9%,
+			#ffffff 10%,
+			#ffffff 15%,
+			transparent 16%
+		),
+		radial-gradient(
+			circle at bottom right,
+			transparent 9%,
+			#ffffff 10%,
+			#ffffff 15%,
+			transparent 16%
+		),
+		radial-gradient(circle, transparent 25%, #e7cefd 26%),
+		linear-gradient(
+			0deg,
+			transparent 44%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 56%
+		),
+		linear-gradient(
+			90deg,
+			transparent 44%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 56%
+		);
+	background-size: 1em 1em;
+	background-color: #e7cefd;
+}
+
+.stripe-pattern {
+	background: linear-gradient(
+		0deg,
+		#ffffff 25%,
+		transparent 26%,
+		transparent 49%,
+		#ffffff80 50%,
+		#ffffff80 75%,
+		transparent 76%
+	);
+	background-size: 1em 1em;
+	background-color: #e8eaed;
+}
+
+.gradient-pattern {
+	background: repeating-linear-gradient(90deg, transparent, #ffffff);
+	background-size: 1em 1em;
+	background-color: #ffe3ba;
+}
+
+.zigzag-pattern {
+	background: linear-gradient(
+		-71deg,
+		#ffffff 25%,
+		transparent 26%,
+		transparent 74%,
+		#ffffff 75%
+	);
+	background-size: 1em 1em;
+	background-color: #cfe0fc;
+}
+
+.symbol-pattern {
+	background: radial-gradient(circle, transparent 25%, #ffe880 26%),
+		linear-gradient(
+			0deg,
+			transparent 44%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 56%
+		),
+		linear-gradient(
+			90deg,
+			transparent 44%,
+			#ffffff 45%,
+			#ffffff 55%,
+			transparent 56%
+		);
+	background-size: 1em 1em;
+	background-color: #ffe880;
+}
